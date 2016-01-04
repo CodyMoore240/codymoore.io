@@ -1,0 +1,34 @@
+.contactEnvelopeWrapper {
+	display: none;
+	
+	@media only screen and (min-width: 1000px) {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		
+		>.svgEnvelope {
+			width: 62px;
+			height: 46px;
+
+			path,
+			rect {
+				fill: $white;
+			}
+		}
+
+		>.line {
+			height: 4px;
+			background-color: $white;
+			flex-grow: 1;
+		}
+
+		>.leftLine {
+			margin-right: 15px;
+		}
+
+		>.rightLine {
+			margin-left: 15px;
+		}
+	}
+}
+

@@ -1,0 +1,63 @@
+.displayWorkSection {
+	padding-top: 30px;
+	padding-bottom: 30px;
+
+	>h1 {
+		text-align: center;
+	}
+
+	>.sitesWrapper {
+		display: flex;
+		flex-wrap: wrap;
+		margin-left: -20px;
+		margin-right: -20px;
+
+		>.dblBorderBox {
+			text-align: center;
+			margin-top: 100px;
+			margin-left: 20px;
+			margin-right: 20px;
+			padding: 30px;
+			padding-bottom: 90px;
+
+			>img {
+				margin-top: -100px;
+				max-width: 240px;
+				width: 100%;
+			}
+			
+			>.btn {
+				position: absolute;
+		    bottom: 20px;
+		    right: 30px;
+		    left: 30px;
+		    display: block;
+			}
+		}
+	}
+
+	@media only screen and (min-width: 600px) {
+		>.sitesWrapper {
+			>.dblBorderBox {
+				width: calc(50% - 40px);
+			}
+		}
+	}
+
+	@media only screen and (min-width: 768px) {
+		padding-top: 60px;
+		padding-bottom: 60px;
+
+		>h1 {
+			margin-bottom: 30px;
+		}
+	}
+
+	@media only screen and (min-width: 1040px) {
+		>.sitesWrapper {
+			>.dblBorderBox {
+				width: calc(33.3333% - 40px);
+			}
+		}
+	}
+} 

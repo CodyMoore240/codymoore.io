@@ -1,0 +1,64 @@
+.heroSection {
+	overflow: hidden;
+	max-height: 450px;
+	border-bottom: 18px $green solid;
+	position: relative;
+	
+	>img {
+		min-width: 700px;
+		left: 50%;
+		position: relative;
+		transform: translateX(-50%);
+		
+	}
+
+	.heroSection-wrapper {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: rgba($black, .7);
+	}
+
+	.heroSection-column {
+		top: 50%;
+		left: 0;
+		right: 0;
+		position: absolute;
+		transform: translateY(-50%);
+		padding-right: 30px;
+		padding-left: 30px;	
+		margin: 0 auto;
+    max-width: 1000px;	
+
+		>h1 {
+			color: $white;
+			text-align: center;
+			margin-bottom: 0;
+		}
+		
+		>p {
+			color: $white;
+			text-align: center;
+			
+		}
+
+		.btn {
+			margin: 0 auto;
+		}
+
+		@media only screen and (min-width: 768px) {
+			>h1 {
+				font-size: 66px;
+				line-height: 80px;
+				
+			}
+			
+			>p {
+				font-size: 22px;
+				line-height: 28px;	
+			}
+		}
+	}
+} 
