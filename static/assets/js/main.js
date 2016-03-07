@@ -9,7 +9,7 @@ $(window).load(function() {
   if(window.location.pathname == "/") {
     $('html').removeClass('scrollHeader fixedWhiteHeader');
     $(window).scroll(function() {
-    	if($('body,html').scrollTop() !== 0){
+    	if($('html,body').scrollTop() !== 0 || $('body').scrollTop() !== 0){
     		$('html').addClass('scrollHeader fixedWhiteHeader');
     	} else {
     		$('html').removeClass('scrollHeader fixedWhiteHeader');
