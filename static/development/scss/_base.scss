@@ -1,0 +1,191 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: $darkGray;
+  font-family: $bodyFont;
+  font-size: 16px;
+  line-height: 22px;
+  text-rendering: optimizelegibility;
+}
+
+img {
+  width: 100%;
+  vertical-align: middle;
+  height: auto;
+  interpolation-mode: bicubic;
+}
+
+iframe {
+  width: 100%;
+  vertical-align: middle;
+  text-transform: uppercase;
+  display: block;
+}
+
+a {
+  color: $linkColor;
+  text-decoration: none;
+  transition: color, .3s;
+
+  &:hover, &:focus, &:active {
+    color: darken($linkColor, 10%);
+    text-decoration: none;
+    outline: 0;
+  }
+}
+
+h1 {
+  font-size: 44px;
+  line-height: 50px;
+  color: $darkGray;
+  margin: 0;
+  text-transform: uppercase;
+  margin-bottom: $vspace;
+  font-weight: 700;
+
+  &.giantHeading {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+}
+
+h2 {
+  @extend h1;
+  font-size: 26px;
+  line-height: 32px;
+  margin-bottom: 5px;
+  // margin-top: 40px;
+}
+
+h3 {
+  @extend h1;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+p, ul, ol, dl, dd, table {
+  margin: 0 0 $hspace;
+}
+
+ul, ol {
+  padding: 0 0 0 ($vspace * 2);
+}
+
+// ol {
+//   counter-reset: li; /* Initiate a counter */
+//   margin-left: 0; /* Remove the default left margin */
+//   padding-left: 0; /* Remove the default left padding */
+// }
+
+// ol > li {
+//   position: relative; /* Create a positioning context */
+//   margin: 0 0 6px 1.5em; /* Give each list item a left margin to make room for the numbers */
+//   list-style: none; /* Disable the normal item numbering */
+// }
+
+// ol > li:before {
+//   content: counter(li); Use the counter as content
+//   counter-increment: li; /* Increment the counter by 1 */
+//   /* Position and style the number */
+//   position: absolute;
+//   top: 0;
+//   left: -1.5em;
+//   width: 1.5em;
+//   height: 1.5em;
+//   /* Some space between the number and the content in browsers that support
+//        generated content but not positioning it (Camino 2 is one example) */
+//   margin-right: 8px;
+//   color: $red;
+//   text-align: center;
+//   font-family: $lobsterFont;
+// }
+
+li ol,
+li ul {
+  margin-top: 6px;
+}
+
+ol ol li:last-child {
+  margin-bottom: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  text-indent: -14px;
+  margin-left: 14px;
+
+  //uncomment for custom bullet colors
+  li {
+    &:before {
+      /*content: "• ";*/
+      content: "\2022  ";
+      color: $black;
+      font-size: 1.4em;
+      vertical-align: bottom;
+    }
+  }
+}
+
+blockquote {
+  font-style: italic;
+}
+
+// hr {
+//   clear: both;
+//   height: 1px;
+//   width: 50%;
+//   margin: 30px auto;
+//   border: none;
+//   background-color: $black;
+// }
+
+.siteContainer {
+  margin: 0 auto;
+  position: relative;
+  max-width: $desktopSiteWidth;
+  @include clearfix;
+}
+
+.megaContainer {
+  @extend .siteContainer;
+  padding-left: $vspace*2;
+  padding-right: $vspace*2;
+}
+
+.container {
+	padding-left: $vspace;
+	padding-right: $vspace;
+}
+
+.column {
+  padding-left: $vspace;
+  padding-right: $vspace;
+  img {
+    margin-bottom: $hspace;
+  }
+}
+
+@media only screen and (min-width: $desktopSiteWidth) {
+.megaContainer {
+  padding-left: $vspace*4;
+  padding-right: $vspace*4;
+}
+
+.container {
+  padding-left: $vspace*2;
+  padding-right: $vspace*2;
+}
+
+.column {
+  padding-left: $vspace*2;
+  padding-right: $vspace*2;
+  img {
+    margin-bottom: $hspace;
+  }
+}
+}

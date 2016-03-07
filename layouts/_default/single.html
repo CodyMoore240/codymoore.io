@@ -1,0 +1,23 @@
+{{ partial "header.html" . }}
+<div id="main" class="blogPost">
+	<div class="siteContainer">
+    <div class="container">
+      <div class="column">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+          <header class="post-header">
+            {{ if isset .Params "image" }}
+            <img src="{{ .Params.image }}" alt="">
+            {{ end }}
+            <h1 class="post-title" itemprop="name headline">{{ .Title }}</h1>
+            <p class="post-meta"><time datetime="{{ .Date}}" itemprop="datePublished">{{ .Date | dateFormat "2006-01-02"}}</time></p>
+          </header>
+
+          <div class="post-content" itemprop="articleBody">
+            {{ .Content }}
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</div>
+{{ partial "footer.html" . }}

@@ -1,0 +1,116 @@
+.skillsSection {
+	border-top: 18px $green solid;
+	overflow: hidden;
+	height: 0;
+	background: repeating-linear-gradient(to right,rgba($lightGray, .5),rgba($darkGray, .5) 3px),url("/assets/images/skillsImage.jpg") no-repeat center;
+	background-size: cover;
+	// display: flex;
+	// flex-wrap: wrap;
+	// align-items: flex-start;
+
+	@media only screen and (min-width: 650px) {
+		border-bottom: 18px $green solid;
+		height: auto;
+		padding-top: 70px;
+		padding-bottom: 70px;
+	}
+
+	>h1.megaContainer {
+		width: 100%;
+		text-align: center;
+		color: $white;
+		height: 100px;
+	}
+
+	>.skillsSection-SVGwrapper {
+		display: flex;
+		align-items: center;
+
+		>div {
+			padding-left: 20px;
+			padding-right: 20px;
+
+		}
+	}
+}
+
+.skillsSection_svgCSS3 {
+	height: auto;
+	width: 100%;
+
+	.text {
+		fill:$white;
+		transition: fill .3s;
+	}
+  .st0 {
+  	fill:$white;
+  }
+  .st1{
+  	fill:#5D5D5D;
+  	transition: fill .3s;
+  }
+  .st2{
+  	fill:#858585;
+  	transition: fill .3s;
+  }
+  .st3{
+  	fill:#B3B3B3;
+  }
+  .st4{
+  	fill:#E6E6E6;
+  }
+
+  // &:hover {
+	//   .st1{
+	//   	fill:#2162AF;
+	//   }
+	//   .st2{
+	//   	fill:#369CD6;
+	//   }
+  // }
+}
+
+.skillsSection_svgSass {
+	width: 100%;
+	height: auto;
+
+	path {
+		fill:$white;
+		transition: fill .3s;
+	}
+}
+
+.skillsSection_svgJQuery {
+	width: 100%;
+	height: auto;
+}
+
+.skillsSection_svgHTML5 {
+	width: 100%;
+	height: auto;
+}
+
+.skillsSection_svgJS {
+	width: 100%;
+	height: auto;
+}
+
+.skillsSection_SassWrapper {
+	width: 25%;
+}
+
+.skillsSection_CSS3Wrapper {
+	width: 15%;
+}
+
+.skillsSection_HTML5Wrapper {
+	width: 15%;
+}
+
+.skillsSection_JQueryWrapper {
+	width: 30%;
+}
+
+.skillsSection_JSWrapper {
+	width: 15%;
+}

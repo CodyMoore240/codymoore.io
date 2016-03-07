@@ -1,0 +1,26 @@
+.layout-blog {
+	@media only screen and (min-width: $desktopSiteWidth) {
+		display: flex;
+		flex-wrap: wrap;
+
+		// margin-left: -15px;
+		// margin-right: -15px;
+
+		>.column {
+			// margin-left: 15px;
+			// margin-right: 15px;
+		}
+
+		>.l-blogHeader {
+			width: 100%;
+		}
+
+		>.postsWrapper {
+			width: 66.6666%;
+		}
+
+		>.postsSidebar {
+			width: 33.3333%;
+		} 
+	}
+} 

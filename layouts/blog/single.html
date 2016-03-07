@@ -1,0 +1,42 @@
+{{ partial "header.html" . }}
+{{ $baseurl := .Site.BaseURL }}
+<div id="main">
+	<div class="siteContainer">
+		<div class="container layout-blog">
+			<div class="column l-blogHeader">
+				<h1 class="giantHeading">Blog</h1>
+			</div>
+			<div class="postsWrapper">
+				{{ range first 5 (where .Site.Pages "Type" "posts") }}
+				<div class="column">
+		  		<div class="postPreview dblBorderBox">
+						{{ if isset .Params "image" }}
+						<img src="{{ .Params.image }}" alt="">
+						{{ end }}
+						<h2>{{ .Title }}</h2>
+         		<p class="postPreview-meta">{{ .Date | dateFormat "2006-01-02"}}</p>
+						<p>{{.Summary}}</p>
+						<a href="{{.RelPermalink}}" class="btn">View Post</a>
+   				</div>
+   			</div>
+        {{ end }}
+			</div>
+			<aside class="column postsSidebar">
+				<div class="sidebarSectionWrapper">
+					<h2>All Posts</h2>
+					<ul class="sidebarSectionWrapper-textLinks">
+					  {{ range (where .Site.Pages "Type" "posts") }}
+						  <li><a href="{{.RelPermalink}}">{{ .Title }}</a></li>
+						{{ end }}
+					</ul>
+				</div>
+				<div class="sidebarSectionWrapper">
+					<h2>Follow Me</h2>
+					{{ partial "socialIcons.html" . }}
+				</div>
+			</aside>
+		</div>
+	</div>
+	{{ partial "contactSection.html" . }}
+</div>
+{{ partial "footer.html" . }}
