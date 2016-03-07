@@ -1,0 +1,25 @@
+.contactFormWrapper {
+	.btn-white {
+		border: 2px solid $white;
+
+	}
+
+	@media only screen and (min-width: $desktopSiteWidth) { 
+		display: flex;
+		flex-wrap: wrap;
+
+		.column {
+			width: calc(33.333%);
+		}
+
+		.btn-white {
+			border: 2px solid $white;
+			width: 100%;
+			margin-top: 24px;
+		}
+
+		textarea {
+			height: 124px;
+		}
+	}
+}

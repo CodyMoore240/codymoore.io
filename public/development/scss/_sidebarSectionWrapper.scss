@@ -1,0 +1,52 @@
+.sidebarSectionWrapper {
+	padding: 35px;
+	background-color: $lightGray;
+	margin-bottom: 40px;
+
+}
+
+.sidebarSectionWrapper-textLinks {
+	@include listPlain;
+
+	>li {
+		margin-bottom: 20px;  
+		
+		>h3 {
+			margin-bottom: 0;
+		}
+
+		>a {
+			color: $darkGray; 
+			text-transform: uppercase;
+			font-size: 18px;
+			line-height: 24px;
+			margin: 5px 0;	 
+			position: relative;  
+
+			&:after {
+				content:'';
+				position: absolute;
+				display: block;
+				width: 0;
+				bottom: -2px;
+				left: 50%;
+				transform: translateX(-50%); 
+				background-color: $green;
+				height: 4px; 
+				transition: width .3s;
+			}
+			
+			&:hover { 
+				color: $darkGray;
+
+				&:after {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+.sidebarSectionWrapper-subList {
+	margin-top: 0;
+}
+

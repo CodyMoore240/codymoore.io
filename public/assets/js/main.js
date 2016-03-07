@@ -7,8 +7,9 @@ $(window).load(function() {
 
   //add class to the html tag if the scroll is not in the first position. Only do it if it is on the homepage
   if(window.location.pathname == "/") {
+    $('html').removeClass('scrollHeader fixedWhiteHeader');
     $(window).scroll(function() {
-    	if($('body').scrollTop() !== 0){
+    	if($('body,html').scrollTop() !== 0){
     		$('html').addClass('scrollHeader fixedWhiteHeader');
     	} else {
     		$('html').removeClass('scrollHeader fixedWhiteHeader');
@@ -16,9 +17,14 @@ $(window).load(function() {
     });
   }
 
+  //offset for coming from another page
+  if(window.location.pathname == "/" && window.location.hash !== "") {
+    $('html,body').scrollTop($(document).scrollTop() -100);
+  }
+
   // smooth scrolling
   $('.smoothScroll').click(function() {
-  if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
     && location.hostname == this.hostname) {
       var $target = $(this.hash);
       $target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');
@@ -80,7 +86,7 @@ $(window).load(function() {
 
         } else {
 
-          // ALL GOOD! just show the success message! You can put whatever HTML you want here. Also you can write as much JQuery as you want here. I just appended the word thanks to the form and then hid the form. 
+          // ALL GOOD! just show the success message! You can put whatever HTML you want here. Also you can write as much JQuery as you want here. I just appended the word thanks to the form and then hid the form.
 
           $('form').after('');
           $('form').hide();
@@ -90,7 +96,7 @@ $(window).load(function() {
           // window.location = '/thank-you'; // redirect a user to another page
 
         }
-      });   
+      });
     }
   });
 });

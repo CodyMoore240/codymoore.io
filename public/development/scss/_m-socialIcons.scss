@@ -1,0 +1,25 @@
+.m-socialIcons {
+	@include listPlain;
+	margin-bottom: 20px;
+
+	>li {
+		display: inline-block;
+		margin-right: 4px;
+
+		svg {
+			height: 40px;
+			width: 40px;
+
+			.m-socialIcons_iconBackground {
+				fill: $green;
+				transition: fill .25s;
+			}
+
+			&:hover {
+				.m-socialIcons_iconBackground {
+					fill: darken($green, 10%);
+				}
+			}
+		}
+	}
+}
