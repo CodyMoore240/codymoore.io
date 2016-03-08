@@ -2,6 +2,9 @@ baseurl = "http://codymoore.io/"
 languageCode = "en-us"
 title = "My New Hugo Site"
 
+
+IgnoreFiles = [ "development" ]
+
 [taxonomies]
 tag = "tags"
 category = "categories"

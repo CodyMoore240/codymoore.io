@@ -25,10 +25,10 @@ gulp.task('styles', function() {
     .on('error', catchError)
     .pipe(autoprefixer('last 2 version'))
     .pipe(minifycss())
-    .pipe(gulp.dest('../assets/css'))
+    .pipe(gulp.dest('../../static/assets/css'))
     .pipe(notify({ message: 'Styles task complete' }));
 });
- 
+
 // Scripts
 // gulp.task('scripts', function() {
 //   return gulp.src('development/unMinifiedjs/*.js')
@@ -36,17 +36,17 @@ gulp.task('styles', function() {
 //     .pipe(uglify())
 //     .pipe(gulp.dest('assets/js'))
 //     .pipe(notify({ message: 'Scripts task complete' }));
-// }); 
- 
+// });
+
 // Watch
 gulp.task('watch', function() {
   //Create LiveReload server
-  livereload.listen();
+  // livereload.listen();
 
   // Watch html and js files and change only the one that changes
-  gulp.watch(['../_site/assets/css/styles.css','../_site/index.html']).on('change', function(file) {
-    livereload.changed(file.path);
-  });
+  // gulp.watch(['../_site/assets/css/styles.css','../_site/index.html']).on('change', function(file) {
+  //   livereload.changed(file.path);
+  // });
 
   // Watch .scss files and change only the one that changes
   gulp.watch('scss/*.scss').on('change', function(file) {

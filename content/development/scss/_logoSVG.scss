@@ -4,14 +4,26 @@
 	margin-top: 10px;
 	margin-bottom: 10px;
 
+
 	.logoSVG-box {
-		fill:none;
+		fill:transparent;
 		stroke:#FFFFFF;
 		stroke-miterlimit:10;
-		transition: stroke .3s;
+		transition: fill .3s;
 
 		.fixedWhiteHeader & {
-			fill: $darkGray;
+			stroke: $darkGray;
+		}
+
+	}
+
+	&:hover {
+		.logoSVG-box {
+			fill: $white;
+
+			.fixedWhiteHeader & {
+				fill: $darkGray;
+			}
 		}
 	}
 
@@ -34,5 +46,4 @@
 	@media only screen and (min-width: 768px) {
 		margin: 0;
 	}
-} 
-
+}
