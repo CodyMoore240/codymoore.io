@@ -11,8 +11,21 @@
 		@include listPlain;
 		position: relative;
 
+		&.skillsLink {
+			display: none;
+
+			@media only screen and (min-width: 650px) {
+				display: block;
+			}
+
+			@media only screen and (min-width: 768px) {
+				display: inline-block;
+			}
+		}
+
 		@media only screen and (min-width: 768px) {
 			display: block;
+
 		}
 
 		&:after {
