@@ -7,7 +7,6 @@ $(window).load(function() {
 
   //add class to the html tag if the scroll is not in the first position. Only do it if it is on the homepage
   if(window.location.pathname == "/") {
-    $('html').removeClass('scrollHeader fixedWhiteHeader');
     $(window).scroll(function() {
     	if($('html,body').scrollTop() !== 0 || $('body').scrollTop() !== 0){
     		$('html').addClass('scrollHeader fixedWhiteHeader');
@@ -15,6 +14,16 @@ $(window).load(function() {
     		$('html').removeClass('scrollHeader fixedWhiteHeader');
     	}
     });
+  }
+
+  if(window.location.pathname == "/") {
+    if($('html,body').scrollTop() !== 0 || $('body').scrollTop() !== 0){
+      $('html').addClass('scrollHeader fixedWhiteHeader');
+      console.log('true');
+    } else {
+      $('html').removeClass('scrollHeader fixedWhiteHeader');
+      console.log('false');
+    }
   }
 
   //offset for coming from another page
@@ -72,31 +81,31 @@ $(window).load(function() {
       // process the form
       $.ajax({
           type        : 'POST', // define the type of HTTP verb we want to use (POST for our form)
-          url         : '/assets/formHandlers/contact-form-handler.php', // the url where we want to POST
+          url         : 'http://dansorganic.com/nonRelated/formHandlers/contact-form-handler.php', // the url where we want to POST
           data        : formData, // our data object
           dataType    : 'json', // what type of data do we expect back from the server
           encode          : true
-      })
-      // using the done promise callback
-      .done(function(data) {
-
-        // here we will handle errors and validation messages
-        if ( ! data.success) {
-          //place error here if you would like one
-
-        } else {
-
-          // ALL GOOD! just show the success message! You can put whatever HTML you want here. Also you can write as much JQuery as you want here. I just appended the word thanks to the form and then hid the form.
-
-          $('form').after('');
-          $('form').hide();
-
-
-          // usually after form submission, you'll want to redirect
-          // window.location = '/thank-you'; // redirect a user to another page
-
-        }
       });
+      // using the done promise callback
+      $('.contactSection_heading').text("Thanks! Your message has been sent!");
+      $('#contactForm').slideUp();
+      // .done(function(data) {
+
+        // // here we will handle errors and validation messages
+        // if ( ! data.success) {
+        //   //place error here if you would like one
+        //
+        // } else {
+        //
+        //   // ALL GOOD! just show the success message! You can put whatever HTML you want here. Also you can write as much JQuery as you want here. I just appended the word thanks to the form and then hid the form.
+        //
+        //
+        //
+        //   // usually after form submission, you'll want to redirect
+        //   // window.location = '/thank-you'; // redirect a user to another page
+        //
+        // }
+      // });
     }
   });
 });
