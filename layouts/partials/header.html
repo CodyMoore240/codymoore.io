@@ -6,11 +6,26 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>codyMoore.io</title>
-  <meta name="description" content="The official website built and maintained by Cody Moore, a web developer from Cincinnati, Ohio.
-">
-  <meta name="keywords" content="Cody Moore, Web Developer, Cincinnati, Ohio.
-">
+  <!-- need to add functionality where the header will add socail sharing if it is a blog post -->
+  {{ if eq .Section "posts" }}
+    <title>{{ .Title }}</title>
+    <meta name="description" content="{{.Description}}" />
+
+    <meta prefix="og: http://ogp.me/ns#" property="og:title" content="{{ .Title }}" />
+    <meta prefix="og: http://ogp.me/ns#" property="og:url" content="{{ .Permalink}}" />
+    <meta prefix="og: http://ogp.me/ns#" property="og:image" content="{{ .Site.BaseURL}}{{ .Params.image }}" />
+    <meta prefix="og: http://ogp.me/ns#" property="og:description" content="{{.Description}}" />
+
+    <!-- twitter card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@240WebGuy">
+    <meta name="twitter:title" content="{{ .Title }}">
+    <meta name="twitter:description" content="{{.Description}}">
+    <meta name="twitter:image" content="{{ .Site.BaseURL}}{{ .Params.image }}">
+  {{else}}
+    <title>codyMoore.io</title>
+    <meta name="description" content="The official website built and maintained by Cody Moore, a web developer from Cincinnati, Ohio.">
+  {{ end }}
 
 	<script src="/assets/js/modernizr-2.8.3.min.js"></script>
   <link rel="stylesheet" href="/assets/css/styles.css">

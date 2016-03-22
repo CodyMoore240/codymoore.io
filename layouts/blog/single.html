@@ -11,7 +11,7 @@
 				<div class="column">
 		  		<div class="postPreview dblBorderBox">
 						{{ if isset .Params "image" }}
-						<img src="{{ .Params.image }}" alt="">
+						<img src="/{{ .Params.image }}" alt="">
 						{{ end }}
 						<h2>{{ .Title }}</h2>
          		<p class="postPreview-meta">{{ .Date | dateFormat "2006-01-02"}}</p>

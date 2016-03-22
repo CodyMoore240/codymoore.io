@@ -1,8 +1,10 @@
 +++
 date = "2016-03-06T21:06:38-06:00"
 title = "Microsoft stopped supporting IE8-10, you should as well."
+description = "An article exploring the reasons why it is beneficial to stop supporting Internet Explorer 8-10."
 tag = "Browser Support"
-image = "/assets/images/postImages/stopUsingIE8.jpg"
+image = "assets/images/postImages/stopUsingIE8.jpg"
+
 +++
 
 We all know that supporting legacy browsers is one of the biggest pains when it comes to developing websites. What looks like the smallest bug may take hours to fix in IE8. Well the time has come, we no longer have to support IE8-10. Hopefully as you read this post you will agree with me.
