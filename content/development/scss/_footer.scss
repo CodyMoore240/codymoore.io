@@ -1,11 +1,16 @@
 #footer {
-	background-color: $gray;
-	padding-top: 10px;
-	padding-bottom: 10px;
+	// flex: 1 0 auto;
+	flex: none;
 
-	>p {
-		text-align: center;
-		color: $white;
-		margin-bottom: 0;
+	.footer_Wrapper {
+		background-color: $gray;
+		padding-top: 10px;
+		padding-bottom: 10px;
+
+		>p {
+			text-align: center;
+			color: $white;
+			margin-bottom: 0;
+		}
 	}
-} 
+}
