@@ -1,15 +1,18 @@
 import React from 'react'
 import 'assets/styles/base.module.scss'
-import Logo from 'components/Logo'
+import Header from 'components/Header'
+import Hero from 'components/Hero'
+import SiteContainer from 'components/SiteContainer'
 
 function App() {
   return (
     <div>
-      <Logo
-        text={`codymoore.io`}
-      ></Logo>
+      <SiteContainer>
+        <Header></Header>
+      </SiteContainer>
+      <Hero></Hero>
       Here it is
-      </div>
+    </div>
   )
 }
 
