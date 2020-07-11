@@ -1,0 +1,33 @@
+.container {
+  display: grid;
+  grid-template-columns: 40px auto;
+  grid-column-gap: 4px;
+  align-items: center;
+
+  &:hover {
+    .svg {
+      fill: white;
+    }
+  }
+}
+
+.text {
+  text-transform: uppercase;
+  font-weight: 700;
+  color: white;
+}
+
+.svg {
+  width: 40px;
+}
+
+.box {
+  fill:transparent;
+  stroke:#FFFFFF;
+  stroke-miterlimit:10;
+  transition: fill .3s;
+}
+
+.bracket {
+  fill: var(--colorGreen);
+}
