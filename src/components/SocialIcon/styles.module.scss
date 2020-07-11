@@ -1,0 +1,16 @@
+.svg {
+  height: 40px;
+  width: 40px;
+
+  .background {
+    fill: var(--colorGreen);
+    transition: fill .25s;
+    
+  }
+
+  &:hover {
+    .background {
+      fill: #2b8e1a;
+    }
+  }
+}

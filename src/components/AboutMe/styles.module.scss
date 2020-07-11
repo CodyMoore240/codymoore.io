@@ -19,3 +19,9 @@
   width: 100%;
   max-width: 280px;
 }
+
+.iconsWrapper {
+  display: grid;
+  grid-template-columns: 40px 40px;
+  grid-column-gap: 10px;
+}
