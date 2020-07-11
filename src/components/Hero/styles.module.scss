@@ -1,6 +1,6 @@
 .container {
   overflow: hidden;
-  max-height: 250px;
+  max-height: 200px;
   border-bottom: 4px solid var(--colorGreen);
   position: relative;
 }
@@ -23,6 +23,7 @@
   display: grid;
   align-items: center;
   justify-items: center;
+  padding-top: 20px;
 }
 
 .contentWrapper {
@@ -34,10 +35,25 @@
   text-align: center;
   text-transform: uppercase;
   font-weight: 700;
-  font-size: 28px;
+  font-size: 20px;
 }
 
 .bottomText {
   color: white;
   text-align: center;
+  font-size: 14px;
+}
+
+@media only screen and (min-width: 650px) {
+  .container {
+    max-height: 250px;
+  }
+
+  .topText {
+    font-size: 30px;
+  }
+
+  .bottomText {
+    font-size: 16px;
+  }
 }

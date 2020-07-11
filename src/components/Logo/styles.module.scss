@@ -26,3 +26,13 @@
 .bracket {
   fill: var(--colorGreen);
 }
+
+@media only screen and (min-width: 650px) {
+  .topText {
+    font-size: 30px;
+  }
+
+  .bottomText {
+    font-size: 16px;
+  }
+}

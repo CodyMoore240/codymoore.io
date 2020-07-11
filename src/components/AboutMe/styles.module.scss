@@ -1,10 +1,11 @@
 .container {
-  padding: 30px 20px 20px 20px;
+  padding-top: 30px;
+  padding-bottom: 85px;
 }
 
 .contentWrapper {
   display: grid;
-  grid-template-columns: auto 280px;
+  grid-template-columns: 1fr;
   grid-column-gap: 40px;
 }
 
@@ -15,6 +16,7 @@
 }
 
 .myFace {
+  display: none;
   border: 10px solid #e0e0e0;
   width: 100%;
   max-width: 280px;
@@ -24,4 +26,16 @@
   display: grid;
   grid-template-columns: 40px 40px;
   grid-column-gap: 10px;
+}
+
+@media only screen and (min-width: 650px) {
+  .contentWrapper {
+    display: grid;
+    grid-template-columns: auto 280px;
+    grid-column-gap: 40px;
+  }
+
+  .myFace {
+    display: block;
+  }
 }
