@@ -7,7 +7,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizelegibility;
   font-size: 16px;
-  line-height: 1;
+  line-height: 1.5;
 }
 
 * {
@@ -24,4 +24,15 @@ code {
   --colorGray: #5a5a5a;
   --colorLightGray: #cccccc;
   --colorGreen: #38b922;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--colorDarkGray);
+  text-transform: uppercase;
+  font-weight: 700;
 }
