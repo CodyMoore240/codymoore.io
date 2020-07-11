@@ -4,6 +4,7 @@ import Header from 'components/Header'
 import Hero from 'components/Hero'
 import SiteContainer from 'components/SiteContainer'
 import Footer from 'components/Footer'
+import AboutMe from 'components/AboutMe'
 
 import styles from './styles.module.scss'
 
@@ -15,7 +16,9 @@ function App() {
       </SiteContainer>
       <Hero></Hero>
       <SiteContainer>
-        <div>Main Content</div>
+        <div className={styles.contentWrapper}>
+          <AboutMe></AboutMe>
+        </div>
       </SiteContainer>
       <Footer></Footer>
     </div>
