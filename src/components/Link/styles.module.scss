@@ -1,0 +1,11 @@
+.container {
+  color: var(--colorGreen);
+  text-decoration: none;
+  transition: color,.3s;
+
+  &:hover {
+    color: #2b8e1a;
+    text-decoration: none;
+    outline: 0;
+  }
+}
