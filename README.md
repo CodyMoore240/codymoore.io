@@ -1,3 +1,7 @@
+# codyMoore.io
+
+Code base for codyMoore.io. Built using React with TypeScript. Complete overkill but why not?
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
