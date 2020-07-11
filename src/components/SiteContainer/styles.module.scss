@@ -1,0 +1,12 @@
+.container {
+  margin: 0 auto;
+  position: relative;
+  max-width: 1120px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media only screen and (min-width: 650px) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}

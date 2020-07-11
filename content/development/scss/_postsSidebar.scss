@@ -1,9 +1,0 @@
-.postsSidebar {
-	display: none;
-	
-	@media only screen and (min-width: $desktopSiteWidth) {
-		display: block;
-		align-self: flex-start;
-	}
-}
-

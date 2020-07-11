@@ -1,0 +1,38 @@
+.container {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-column-gap: 5px;
+  align-items: center;
+}
+
+.text {
+  text-transform: uppercase;
+  font-weight: 700;
+  color: white;
+  font-size: 20px;
+}
+
+.svg {
+  height: 30px;
+}
+
+.box {
+  fill:transparent;
+  stroke:#FFFFFF;
+  stroke-miterlimit:10;
+  transition: fill .3s;
+}
+
+.bracket {
+  fill: var(--colorGreen);
+}
+
+@media only screen and (min-width: 650px) {
+  .topText {
+    font-size: 30px;
+  }
+
+  .bottomText {
+    font-size: 16px;
+  }
+}
