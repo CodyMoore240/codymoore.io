@@ -1,9 +1,21 @@
 .container {
+  padding: 30px 20px 20px 20px;
+}
 
+.contentWrapper {
+  display: grid;
+  grid-template-columns: auto 280px;
+  grid-column-gap: 40px;
 }
 
 .title {
   font-size: 32px;
   line-height: 38px;
   margin: 0 0 10px;
+}
+
+.myFace {
+  border: 10px solid #e0e0e0;
+  width: 100%;
+  max-width: 280px;
 }

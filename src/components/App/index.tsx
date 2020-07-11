@@ -16,9 +16,7 @@ function App() {
       </SiteContainer>
       <Hero></Hero>
       <SiteContainer>
-        <div className={styles.contentWrapper}>
-          <AboutMe></AboutMe>
-        </div>
+        <AboutMe></AboutMe>
       </SiteContainer>
       <Footer></Footer>
     </div>
